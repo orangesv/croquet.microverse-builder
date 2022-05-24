@@ -1,4 +1,4 @@
-// Copyright 2021 by Croquet Corporation, Inc. All Rights Reserved.
+// Copyright 2022 by Croquet Corporation, Inc. All Rights Reserved.
 // https://croquet.io
 // info@croquet.io
 
@@ -47,7 +47,7 @@ export function init(Constants) {
                 placeholder: true,
                 placeholderSize: [100, 0.01, 100],
                 placeholderColor: 0xcccccc,
-                placeholderOffset: [0, -1.7, 0],
+                placeholderOffset: [0, 0, 0],
 
             }
         },
