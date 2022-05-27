@@ -14,7 +14,7 @@ export function init(Constants) {
 
     Constants.UserBehaviorDirectory = "behaviors/tutorial";
     Constants.UserBehaviorModules = [
-        "lights.js", "simpleSpin.js", "spinButtonOld.js"
+        "lights.js", "simpleSpin.js", "spinbutton.js", "accelerometer.js", "spinner.js"
     ];
 
     // const frameColor = 0x888888;
@@ -67,6 +67,7 @@ export function init(Constants) {
                 type: "2d",
                 textureType: "image",
                 textureLocation: "./assets/images/Orange_logo.png",
+                behaviorModules: ["accelerometer_iphone","spinbutton"],
                 // frameColor: 0xcccccc,
                 color: 0xffffff,
                 cornerRadius: 0.05,
@@ -77,7 +78,7 @@ export function init(Constants) {
         {
             card: {
                 name: "1988 Logo",
-                behaviorModules: ["spinbutton_old"],
+                behaviorModules: [],
                 translation: [-5, 3,-10],
                 scale: [4, 4, 4],
                 type: "2d",
@@ -98,12 +99,13 @@ export function init(Constants) {
                 type: "2d",
                 textureType: "image",
                 textureLocation: "./assets/images/bibop.png",
-                behaviorModules: ["SimpleSpin"],
+                behaviorModules: ["spinner"],
                 // frameColor: 0xcccccc,
                 color: 0xffffff,
                 cornerRadius: 0.05,
                 depth: 0.05,
                 shadow: true,
+                rotspeed: 0.1,
             }
         },        
         {
@@ -111,12 +113,13 @@ export function init(Constants) {
                 name:"Nokia",
                 type: "3d",
                 dataLocation: "./assets/3D/Nokia_3310.glb.zip",
-                behaviorModules: ["SimpleSpin"],
+                behaviorModules: ["spinner"],
                 layers: ["pointer"],
                 translation:[0, 10, -10],
                 dataScale:[2,2,2],
                 //rotation:[0, Math.pi/4, 0],
                 shadow: true,
+                rotspeed: 3,
             }
         },         
         {
@@ -124,12 +127,13 @@ export function init(Constants) {
                 name:"iPhone",
                 type: "3d",
                 dataLocation: "./assets/3D/iPhone_12_pro_max.glb.zip",
-                behaviorModules: ["SimpleSpin"],
+                behaviorModules: ["spinner"],
                 layers: ["pointer"],
                 translation:[5, 10, -10],
                 dataScale:[2,2,2],
                 //rotation:[0, Math.pi/4, 0],
                 shadow: true,
+                rotspeed: 53.7,
             }
         },      
     ];
